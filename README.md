@@ -6,6 +6,8 @@
 
 A colourful solitaire-style puzzle game that runs in the terminal, written in pure Python with no third-party libraries.
 
+**[▶ Play it in your browser](https://raudhahabas.github.io/Solitaire-Based-Game/)**: no install needed, and it has an on-screen keypad for phones.
+
 <p align="center">
   <img src="docs/screenshot.svg" alt="The game board: six coloured stacks of numbered cards labelled A to F" width="360">
 </p>
@@ -18,6 +20,7 @@ I first wrote this game for a university Python programming module, then came ba
 - **fixed bugs** in the original: undo could corrupt earlier moves, empty input crashed the game, and cards could be pulled out of finished stacks
 - **wrote 26 unit tests** that cover every rule, and set up **GitHub Actions** to run them on Python 3.10 to 3.13
 - **made the game easier to play** with clear error messages, an in-game help screen, a quit command, and a `--seed` option for repeatable deals
+- **ported it to the web** as a single HTML/JavaScript page hosted on GitHub Pages. It uses the same rules, explains why a move isn't allowed, and only enables the keys that make sense at each point
 
 ## How to play
 
@@ -72,6 +75,9 @@ solitaire/
 tests/
 ├── test_game.py
 └── test_display.py
+docs/
+├── index.html   # Browser version (served by GitHub Pages)
+└── screenshot.svg
 main.py          # Entry point (python main.py)
 ```
 
